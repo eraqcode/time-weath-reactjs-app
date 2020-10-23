@@ -16,7 +16,7 @@ export const DateTime = () => {
             if (data) {
                 const [ lat, lon ] = getLocation()
                 const APIKEY = process.env.REACT_APP_TIMEZONE_APIKEY;
-                const url = `http://api.timezonedb.com/v2.1/get-time-zone?key=${APIKEY}&format=json&by=position&lat=${lat}&lng=${lon}`;
+                const url = `https://api.timezonedb.com/v2.1/get-time-zone?key=${APIKEY}&format=json&by=position&lat=${lat}&lng=${lon}`;
                 let response = null
                 try {
                     response = await axios.get(url)
