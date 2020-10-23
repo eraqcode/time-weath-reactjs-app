@@ -15,7 +15,7 @@ export const DateTime = () => {
         const getDateTime = async () => {
             if (data) {
                 const [ lat, lon ] = getLocation()
-                const APIKEY = `84SUZ3P6IMK3`;
+                const APIKEY = process.env.REACT_APP_TIMEZONE_APIKEY;
                 const url = `http://api.timezonedb.com/v2.1/get-time-zone?key=${APIKEY}&format=json&by=position&lat=${lat}&lng=${lon}`;
                 let response = null
                 try {

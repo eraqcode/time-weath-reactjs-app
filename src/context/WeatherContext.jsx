@@ -29,7 +29,7 @@ export const WeatherContextProvider = (props) => {
         const getWeather = async () => {
             
             if (queryMade) {
-                let APIKEY = '6ce0e3d8c0e6eee6711bd54c2690b9fa'
+                let APIKEY = process.env.REACT_APP_WEATHER_APIKEY ;
                 let url = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${APIKEY}&units=metric`
                 let response = null
                 try {
